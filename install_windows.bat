@@ -28,7 +28,6 @@ echo Installing requirements...
 call %VENV_DIR%\Scripts\activate.bat
 pip install --upgrade pip
 pip install -r requirements.txt
-deactivate
 
 REM Create launcher script
 set LAUNCHER=launch.bat
@@ -36,8 +35,7 @@ echo Creating launch script...
 
 (
 echo @echo off
-echo call %%~dp0%VENV_DIR%\Scripts\activate.bat
-echo python %%~dp0main.py %%*
+echo "%~dp0venv\Scripts\python.exe" "%~dp0main.py" %%*
 ) > %LAUNCHER%
 
 echo Setup complete! Use %LAUNCHER% to run the project.
