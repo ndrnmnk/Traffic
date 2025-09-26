@@ -1,7 +1,7 @@
 from backend import *
 
 def read_input(prompt, max_value):
-    while True:
+    while 1:
         try:
             t = int(raw_input(prompt))
         except ValueError:
