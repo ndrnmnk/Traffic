@@ -9,7 +9,7 @@ def read_input(prompt, max_value):
 			continue
 		if 0 < t <= max_value:
 			return t
-		print(f"число має бути більше за нуль і менше за {max_value}")
+		print("Число має бути більше за нуль і менше за", max_value)
 
 abonents = read_input("Кількість абонентів: ", 1500)
 workday = read_input("Довжина робочого дня (хв): ", 1440)
@@ -22,7 +22,6 @@ all_traffic, channel_traffic = get_traffic(abonents, workday, n_sessions, n_chan
 chance_of_waiting = erlang_c(all_traffic, n_channels, p_retry)
 chance_of_blocking_pb = erlang_b(all_traffic, n_channels)
 chance_of_blocking_pa = erlang_a(all_traffic, n_channels)
-
 
 print("Трафік багатоканальної системи:", round(all_traffic, 2))
 print("Трафік системи на канал:", round(channel_traffic, 2))

@@ -13,7 +13,7 @@ class GraphDisplay(QWidget):
 	def __init__(self, parent_app):
 		super().__init__(parent_app)
 
-		self.setWindowFlag(Qt.Window)
+		self.setWindowFlags(Qt.Window)
 		self.setWindowTitle("Traffic graph")
 
 		self.grid = QGridLayout()

@@ -15,3 +15,19 @@ For macOS and GNU/Linux, run `install_linux_macos.sh` instead.
 
 If installation is successful, `launcher.bat` (on Windows) or `launcher.sh` (on macOS and GNU/Linux) should appear.
 Use it to start the app.
+
+## Notes for Windows 7
+
+Installing PyQt5 on 7 is a bit harder. You need to download this 
+[wheel](https://files.pythonhosted.org/packages/f0/3a/8f2261c0477008057636b9f992952033748b9ee94541dd54373f7d6bf5f1/PyQt5-5.8-5.8.0-cp34.cp35.cp36.cp37-none-win32.whl) 
+and put it in project folder. Now, open terminal, navigate to project folder and do this:
+```shell
+venv\Scripts\activate.bat
+pip install PyQt5-5.8-5.8.0-cp34.cp35.cp36.cp37-none-win32.whl
+pip install sip==4.19.7
+```
+
+## For other OSes
+
+If your OS can't install the requirements but can run `Python 2` or later, you can use the console version.  
+It doesn't require venv or anything, just double-click `main_cli.py` if you have Python 3 or `main_cli_py2.py` if Python 2.
