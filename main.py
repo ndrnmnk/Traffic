@@ -72,11 +72,11 @@ class Traffic(QMainWindow):
 		chance_of_blocking_pb = erlang_b(all_traffic, inputs[3])
 		chance_of_blocking_pa = erlang_a(all_traffic, inputs[3])
 
-		self.total_trafic_label.setText(str(round(all_traffic, 2)))
-		self.channel_taffic_label.setText(str(round(channel_traffic, 2)))
-		self.pc_label.setText(str(round(chance_of_waiting, 2)))
-		self.pb_label.setText(str(round(chance_of_blocking_pb, 2)))
-		self.pa_label.setText(str(round(chance_of_blocking_pa, 2)))
+		self.total_trafic_label.setText(str(round_2nd_digit(all_traffic)))
+		self.channel_taffic_label.setText(str(round_2nd_digit(channel_traffic)))
+		self.pc_label.setText(str(round_2nd_digit(chance_of_waiting)))
+		self.pb_label.setText(str(round_2nd_digit(chance_of_blocking_pb)))
+		self.pa_label.setText(str(round_2nd_digit(chance_of_blocking_pa)))
 
 	def read_inputs_safe(self):
 		inputs = []

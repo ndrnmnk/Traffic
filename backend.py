@@ -33,3 +33,6 @@ def factorial(n):
 	for i in range(2, n+1):
 		result *= i
 	return result
+
+def round_2nd_digit(n):
+	return int(n*100)/100.0
