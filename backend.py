@@ -2,7 +2,12 @@ e = 2.718281828459045
 
 def erlang_b(total_traffic, num_channels):
 	numerator = 100 * (total_traffic ** num_channels)
-	denominator = factorial(num_channels) * sum((total_traffic ** k) / float(factorial(k)) for k in range(num_channels + 1))
+	factorial_num_channels = factorial(num_channels)
+	sum_terms = 0.0
+	for k in range(num_channels + 1):
+		term = (total_traffic ** k) / float(factorial(k))
+		sum_terms += term
+	denominator = factorial_num_channels * sum_terms
 	return numerator / denominator
 
 
